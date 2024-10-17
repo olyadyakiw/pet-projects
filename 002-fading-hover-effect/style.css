@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --hover-color: black;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(30, 1fr);
+  grid-template-rows: repeat(30, 1fr);
+}
+
+span {
+  display: inline-block;
+  border: 1px solid #000;
+  aspect-ratio: 1 / 1;
+  transition: background 1s;
+}
+
+span:hover {
+  background-color: var(--hover-color);
+  transition: background 0s;
+  border: 1px solid var(--hover-color);
+}
